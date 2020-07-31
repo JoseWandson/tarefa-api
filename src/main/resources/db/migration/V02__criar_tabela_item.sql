@@ -1,0 +1,7 @@
+CREATE TABLE item (
+  id BIGINT PRIMARY KEY AUTO_INCREMENT,
+  concluido BOOLEAN NOT NULL,
+  descricao VARCHAR(50) NOT NULL,
+  tarefa_id BIGINT NOT NULL,
+  FOREIGN KEY (tarefa_id) REFERENCES tarefa(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
